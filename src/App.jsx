@@ -13,7 +13,7 @@ function App() {
       price: 12,
       strength: 6,
       agility: 4,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/0c2d6b.png',
+      img: '/survivor.png',
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ function App() {
       price: 10,
       strength: 5,
       agility: 5,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/033a16.png',
+      img: '/scavenger.png',
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ function App() {
       price: 18,
       strength: 7,
       agility: 8,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/262c36.png',
+      img: '/shadow.png',
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ function App() {
       price: 14,
       strength: 7,
       agility: 6,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/3c1e70.png',
+      img: '/tracker.png',
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ function App() {
       price: 20,
       strength: 6,
       agility: 8,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/4b2900.png',
+      img: '/sharpshooter.png',
     },
     {
       id: 6,
@@ -53,7 +53,7 @@ function App() {
       price: 15,
       strength: 5,
       agility: 7,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/5a1e02.png',
+      img: '/medic.png',
     },
     {
       id: 7,
@@ -61,7 +61,7 @@ function App() {
       price: 16,
       strength: 6,
       agility: 5,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/5e103e.png',
+      img: '/engineer.png',
     },
     {
       id: 8,
@@ -69,7 +69,7 @@ function App() {
       price: 11,
       strength: 8,
       agility: 3,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/67060c.png',
+      img: '/brawler.png',
     },
     {
       id: 9,
@@ -77,7 +77,7 @@ function App() {
       price: 17,
       strength: 5,
       agility: 9,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/ac3220.png',
+      img: '/infiltrator.png',
     },
     {
       id: 10,
@@ -85,7 +85,7 @@ function App() {
       price: 22,
       strength: 7,
       agility: 6,
-      img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-state-management-lab/assets/e41f26.png',
+      img: '/leader.png',
     },
   ])
 

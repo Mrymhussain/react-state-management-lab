@@ -14,3 +14,9 @@ li {
   border: whitesmoke 3px solid;
   border-radius: 8px;
 }
+
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
