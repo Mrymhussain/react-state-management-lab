@@ -1,10 +1,14 @@
-// src/App.jsx
+import './App.css'
+import { useState } from 'react'
 
-const App = () => {
+function App() {
+  const [team, setTeam] = useState([])
 
   return (
-    <h1>Hello world!</h1>
-  );
+    <>
+      <h1>Zombie Fighters</h1>
+    </>
+  )
 }
 
 export default App
