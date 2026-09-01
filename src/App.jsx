@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 function App() {
   const [team, setTeam] = useState([])
-
   const [money, setMoney] = useState(100)
 
   const [zombieFighters, setZombieFighters] = useState([
@@ -89,12 +88,102 @@ function App() {
     },
   ])
 
+  // Event Handlers
+  const handleAddFighter = (fighter) => {
+    if (money < fighter.price) {
+      console.log('Not enough money')
+      return
+    }
+
+    setTeam([...team, fighter])
+
+    const remainingFighters = zombieFighters.filter((zombieFighter) => {
+      return zombieFighter.id !== fighter.id
+    })
+
+    setZombieFighters(remainingFighters)
+    setMoney(money - fighter.price)
+  }
+
+  const handleRemoveFighter = (fighter) => {
+    const remainingTeam = team.filter((teamMember) => {
+      return teamMember.id !== fighter.id
+    })
+
+    setTeam(remainingTeam)
+    setZombieFighters([...zombieFighters, fighter])
+    setMoney(money + fighter.price)
+  }
+
+  let totalStrength = 0
+
+  team.forEach((fighter) => {
+    totalStrength += fighter.strength
+  })
+
+  let totalAgility = 0
+
+  team.forEach((fighter) => {
+    totalAgility += fighter.agility
+  })
+
   return (
     <>
-      <h1>Zombie Fighters</h1>
+      <h1>Welcome to Fighters Website !</h1>
+
+      <h2>Money: ${money}</h2>
+
+      <h2>Total Strength: {totalStrength}</h2>
+
+      <ul>
+        {zombieFighters.map((fighter) => {
+          return (
+            <li key={fighter.id}>
+              <img src={fighter.img} alt={fighter.name} />
+
+              <h3>{fighter.name}</h3>
+
+              <p>Price: ${fighter.price}</p>
+              <p>Strength: {fighter.strength}</p>
+              <p>Agility: {fighter.agility}</p>
+
+              <button onClick={() => handleAddFighter(fighter)}>
+                Add Fighter
+              </button>
+            </li>
+          )
+        })}
+      </ul>
+
+      <h2>Your Team</h2>
+
+      <p>Total Agility: {totalAgility}</p>
+
+      {team.length === 0 ? (
+        <p>Pick some team members!</p>
+      ) : (
+        <ul>
+          {team.map((fighter) => {
+            return (
+              <li key={fighter.id}>
+                <img src={fighter.img} alt={fighter.name} />
+
+                <h3>{fighter.name}</h3>
+
+                <p>Price: ${fighter.price}</p>
+                <p>Strength: {fighter.strength}</p>
+                <p>Agility: {fighter.agility}</p>
+
+                <button onClick={() => handleRemoveFighter(fighter)}>
+                  Remove Fighter
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      )}
     </>
   )
 }
 
 export default App
-
