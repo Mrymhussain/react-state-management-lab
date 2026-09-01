@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 function App() {
   const [team, setTeam] = useState([])
+
   const [money, setMoney] = useState(100)
 
   const [zombieFighters, setZombieFighters] = useState([
@@ -102,6 +103,7 @@ function App() {
     })
 
     setZombieFighters(remainingFighters)
+
     setMoney(money - fighter.price)
   }
 
@@ -111,7 +113,9 @@ function App() {
     })
 
     setTeam(remainingTeam)
+
     setZombieFighters([...zombieFighters, fighter])
+
     setMoney(money + fighter.price)
   }
 
@@ -135,6 +139,8 @@ function App() {
 
       <h2>Total Strength: {totalStrength}</h2>
 
+      <h2>Total Agility: {totalAgility}</h2>
+
       <ul>
         {zombieFighters.map((fighter) => {
           return (
@@ -156,8 +162,6 @@ function App() {
       </ul>
 
       <h2>Your Team</h2>
-
-      <p>Total Agility: {totalAgility}</p>
 
       {team.length === 0 ? (
         <p>Pick some team members!</p>
